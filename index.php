@@ -47,6 +47,13 @@
         ]
     ];
 
+    $nav_menu = [
+        "Introduzione",
+        "Norme sulla privacy",
+        "Termini di servizio",
+        "Tecnologie",
+        "Domande frequenti"
+    ];
 ?>
 
 <!DOCTYPE html>
@@ -58,12 +65,27 @@
     </head>
     <body>
         <header>
-
+            <nav>
+                <ul>
+                    <?php
+                    // beginning of foreach in $nav_menu
+                    foreach($nav_menu as $item) { ?>
+                        <li>
+                            <a href="#">
+                                <?php echo $item; ?>
+                            </a>
+                        </li>
+                        <?php
+                    } ?>
+                    <!-- // end of foreach in $nav_menu -->
+                </ul>
+            </nav>
         </header>
 
         <main>
             <div class="container">
                 <?php
+                // beginning of foreach in $faq
                 foreach ($faq as $q_and_a) { ?>
                     <div class="q-and-a">
                         <h2 class="question">
@@ -71,16 +93,19 @@
                         </h2>
                         <div class="answer">
                             <?php
+                            // beginning of foreach in $q_and_a["answer"]
                             foreach ($q_and_a["answer"] as $paragraph) { ?>
                                 <p>
                                     <?php echo $paragraph; ?>
                                 </p>
                                 <?php
                             } ?>
+                            <!-- end of foreach in $q_and_a["answer"] -->
                         </div>
                     </div>
                     <?php
                 } ?>
+                <!-- end of foreach in $faq -->
             </div>
         </main>
 
