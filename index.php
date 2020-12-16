@@ -56,6 +56,23 @@
     ];
 
     $current_page = 4;
+
+    $footer_links = [
+        "Google",
+        "Tutto su Google",
+        "Privacy",
+        "Termini"
+    ];
+
+    $languages = [
+        "Deutsch",
+        "English",
+        "Español",
+        "Français",
+        "Italiano"
+    ];
+
+    $current_language = 4;
 ?>
 
 <!DOCTYPE html>
@@ -68,6 +85,7 @@
         <link rel="stylesheet" href="dist/app.css">
     </head>
     <body>
+        <!-- beginning of header -->
         <header>
             <div id="header-top">
                 <div class="logo">
@@ -111,7 +129,9 @@
                 </ul>
             </nav>
         </header>
+        <!-- end of header -->
 
+        <!-- beginning of main -->
         <main>
             <div class="container">
                 <?php
@@ -138,9 +158,52 @@
                 <!-- end of foreach in $faq -->
             </div>
         </main>
+        <!-- end of main -->
 
+        <!-- beginning of footer -->
         <footer>
+            <div class="container">
+                <div class="links">
+                    <ul>
+                        <?php
+                        // beginning of foreach in $footer_links
+                        foreach($footer_links as $link) { ?>
+                            <li>
+                                <a href="#">
+                                    <?php echo $link ?>
+                                </a>
+                            </li>
+                            <?php
+                        } ?>
+                        <!-- end of foreach in $footer_links -->
+                    </ul>
+                </div>
 
+                <div class="languages">
+                    <i class="fas fa-globe-europe"></i>
+                    <select>
+                        <?php
+                        // beginning of foreach in $languages
+                        foreach($languages as $index => $language) { ?>
+                            <?php
+                            if ($index == $current_language) { ?>
+                                <option selected="selected">
+                                    <?php echo $language ?>
+                                </option>
+                                <?php
+                            } else { ?>
+                                <option>
+                                    <?php echo $language ?>
+                                </option>
+                                <?php
+                            } ?>
+                            <?php
+                        } ?>
+                        <!-- end of foreach in $languages -->
+                    </select>
+                </div>
+            </div>
         </footer>
+        <!-- end of footer -->
     </body>
 </html>

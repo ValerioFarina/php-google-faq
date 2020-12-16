@@ -1,0 +1,32 @@
+footer {
+    padding: 15px;
+    background-color: rgb(245, 245, 245);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .links {
+            li {
+                margin-right: 10px;
+
+                a {
+                    font-size: 12px;
+                    color: rgba(61, 61, 61, 0.8);
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .languages {
+            i {
+                color: $brand_secondary;
+            }
+
+            select {
+                min-width: 200px;
+            }
+        }
+    }
+}

@@ -12,7 +12,18 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+}
+
 .container {
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -69,32 +80,24 @@ header #header-top .icons i {
   cursor: pointer;
 }
 
-header nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-header nav ul li {
-  display: inline-block;
+header nav li {
   margin-right: 20px;
   margin-bottom: -1px;
 }
 
-header nav ul li a {
+header nav li a {
   display: inline-block;
   padding: 10px 0;
   font-weight: 600;
 }
 
-header nav ul li a:hover,
-header nav ul li a.current {
+header nav li a:hover,
+header nav li a.current {
   color: #3367d6;
   border-bottom: 3px solid #3367d6;
 }
 
 main .container {
-  max-width: 900px;
   padding-top: 200px;
 }
 
@@ -112,5 +115,34 @@ main .container .q-and-a p {
 
 main .container .q-and-a a {
   color: #3367d6;
+}
+
+footer {
+  padding: 15px;
+  background-color: whitesmoke;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .container .links li {
+  margin-right: 10px;
+}
+
+footer .container .links li a {
+  font-size: 12px;
+  color: rgba(61, 61, 61, 0.8);
+  font-weight: 300;
+}
+
+footer .container .languages i {
+  color: #3367d6;
+}
+
+footer .container .languages select {
+  min-width: 200px;
 }
 

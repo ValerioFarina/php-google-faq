@@ -51,26 +51,19 @@ header {
     }
 
     nav {
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        li {
+            margin-right: 20px;
+            margin-bottom: -1px;
 
-            li {
+            a {
                 display: inline-block;
-                margin-right: 20px;
-                margin-bottom: -1px;
+                padding: 10px 0;
+                font-weight: 600;
 
-                a {
-                    display: inline-block;
-                    padding: 10px 0;
-                    font-weight: 600;
-
-                    &:hover,
-                    &.current {
-                        color: $brand_secondary;
-                        border-bottom: 3px solid $brand_secondary;
-                    }
+                &:hover,
+                &.current {
+                    color: $brand_secondary;
+                    border-bottom: 3px solid $brand_secondary;
                 }
             }
         }
