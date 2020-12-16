@@ -1,6 +1,10 @@
 header {
     padding: 15px 15px 0 15px;
 
+    a {
+        color: $brand_primary;
+    }
+
     #header-top {
         display: flex;
         justify-content: space-between;
@@ -11,7 +15,6 @@ header {
             a {
                 display: flex;
                 align-items: center;
-                color: $brand_primary;
 
                 img {
                     max-height: 25px;
@@ -37,6 +40,13 @@ header {
 
                 a {
                     padding: 10px 0;
+                    font-weight: 600;
+
+                    &:hover,
+                    &.current {
+                        color: $brand_secondary;
+                        border-bottom: 3px solid $brand_secondary;
+                    }
                 }
             }
         }

@@ -54,6 +54,8 @@
         "Tecnologie",
         "Domande frequenti"
     ];
+
+    $current_page = 4;
 ?>
 
 <!DOCTYPE html>
@@ -84,12 +86,23 @@
                 <ul>
                     <?php
                     // beginning of foreach in $nav_menu
-                    foreach($nav_menu as $item) { ?>
-                        <li>
-                            <a href="#">
-                                <?php echo $item; ?>
-                            </a>
-                        </li>
+                    foreach($nav_menu as $index => $item) { ?>
+                        <?php
+                        if ($index == $current_page) { ?>
+                            <li>
+                                <a href="#" class="current">
+                                    <?php echo $item; ?>
+                                </a>
+                            </li>
+                            <?php
+                        } else { ?>
+                            <li>
+                                <a href="#">
+                                    <?php echo $item; ?>
+                                </a>
+                            </li>
+                            <?php
+                        } ?>
                         <?php
                     } ?>
                     <!-- // end of foreach in $nav_menu -->

@@ -15,6 +15,10 @@ header {
   padding: 15px 15px 0 15px;
 }
 
+header a {
+  color: #5f6368;
+}
+
 header #header-top {
   display: flex;
   justify-content: space-between;
@@ -27,7 +31,6 @@ header #header-top .logo {
 header #header-top .logo a {
   display: flex;
   align-items: center;
-  color: #5f6368;
 }
 
 header #header-top .logo a img {
@@ -52,6 +55,13 @@ header nav ul li {
 
 header nav ul li a {
   padding: 10px 0;
+  font-weight: 600;
+}
+
+header nav ul li a:hover,
+header nav ul li a.current {
+  color: #3367d6;
+  border-bottom: 3px solid #3367d6;
 }
 
 main .container {
