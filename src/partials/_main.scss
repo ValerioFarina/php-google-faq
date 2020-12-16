@@ -1,10 +1,14 @@
 main {
     .container {
         max-width: 900px;
-        padding-top: $spacing;
+        padding-top: $spacing*2;
 
         .q-and-a {
             margin-bottom: $spacing;
+
+            h2 {
+                color: #3c4043;
+            }
 
             p {
                 line-height: $spacing/4;
@@ -15,5 +19,4 @@ main {
             }
         }
     }
-
 }

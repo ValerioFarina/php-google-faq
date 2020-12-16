@@ -1,10 +1,9 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
@@ -20,6 +19,11 @@ a {
 header {
   padding: 15px 15px 0 15px;
   border-bottom: 1px solid grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
 }
 
 header a {
@@ -66,19 +70,19 @@ header #header-top .icons i {
 }
 
 header nav ul {
-  display: flex;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 header nav ul li {
+  display: inline-block;
   margin-right: 20px;
   margin-bottom: -1px;
 }
 
 header nav ul li a {
-  display: block;
+  display: inline-block;
   padding: 10px 0;
   font-weight: 600;
 }
@@ -91,11 +95,15 @@ header nav ul li a.current {
 
 main .container {
   max-width: 900px;
-  padding-top: 100px;
+  padding-top: 200px;
 }
 
 main .container .q-and-a {
   margin-bottom: 100px;
+}
+
+main .container .q-and-a h2 {
+  color: #3c4043;
 }
 
 main .container .q-and-a p {
