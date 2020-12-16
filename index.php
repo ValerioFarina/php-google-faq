@@ -64,6 +64,7 @@
         <meta charset="utf-8">
         <title></title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <link rel="stylesheet" href="dist/app.css">
     </head>
     <body>
@@ -78,7 +79,10 @@
                     </a>
                 </div>
                 <div class="icons">
-
+                    <svg class="gb_6e" focusable="false" viewBox="0 0 24 24">
+                        <path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path>
+                    </svg>
+                    <i class="fas fa-user"></i>
                 </div>
             </div>
 
@@ -87,22 +91,20 @@
                     <?php
                     // beginning of foreach in $nav_menu
                     foreach($nav_menu as $index => $item) { ?>
-                        <?php
-                        if ($index == $current_page) { ?>
-                            <li>
+                        <li>
+                            <?php
+                            if ($index == $current_page) { ?>
                                 <a href="#" class="current">
                                     <?php echo $item; ?>
                                 </a>
-                            </li>
-                            <?php
-                        } else { ?>
-                            <li>
+                                <?php
+                            } else { ?>
                                 <a href="#">
                                     <?php echo $item; ?>
                                 </a>
-                            </li>
-                            <?php
-                        } ?>
+                                <?php
+                            } ?>
+                        </li>
                         <?php
                     } ?>
                     <!-- // end of foreach in $nav_menu -->
