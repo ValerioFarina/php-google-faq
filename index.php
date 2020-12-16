@@ -65,9 +65,20 @@
             <div class="container">
                 <?php
                 foreach ($faq as $q_and_a) { ?>
-                    <h2 class="question">
-                        <?php echo $q_and_a["question"] ?>
-                    </h2>
+                    <div class="q-and-a">
+                        <h2 class="question">
+                            <?php echo $q_and_a["question"]; ?>
+                        </h2>
+                        <div class="answer">
+                            <?php
+                            foreach ($q_and_a["answer"] as $paragraph) { ?>
+                                <p>
+                                    <?php echo $paragraph; ?>
+                                </p>
+                                <?php
+                            } ?>
+                        </div>
+                    </div>
                     <?php
                 } ?>
             </div>
