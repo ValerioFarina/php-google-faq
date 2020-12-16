@@ -57,6 +57,24 @@
         <link rel="stylesheet" href="dist/app.css">
     </head>
     <body>
-        <?php var_dump($faq); ?>
+        <header>
+
+        </header>
+
+        <main>
+            <div class="container">
+                <?php
+                foreach ($faq as $q_and_a) { ?>
+                    <h2 class="question">
+                        <?php echo $q_and_a["question"] ?>
+                    </h2>
+                    <?php
+                } ?>
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
     </body>
 </html>
