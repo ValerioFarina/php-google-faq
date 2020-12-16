@@ -61,10 +61,25 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="dist/app.css">
     </head>
     <body>
         <header>
+            <div id="header-top">
+                <div class="logo">
+                    <a href="#">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png" alt="Google Logo">
+                        <h2>
+                            Privacy e termini
+                        </h2>
+                    </a>
+                </div>
+                <div class="icons">
+
+                </div>
+            </div>
+
             <nav>
                 <ul>
                     <?php
