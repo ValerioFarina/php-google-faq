@@ -1,6 +1,19 @@
 main {
     .container {
         max-width: 900px;
-        padding-top: 50px;
+        padding-top: $spacing;
+
+        .q-and-a {
+            margin-bottom: $spacing;
+
+            p {
+                line-height: $spacing/4;
+            }
+
+            a {
+                color: $brand_primary;
+            }
+        }
     }
+
 }
